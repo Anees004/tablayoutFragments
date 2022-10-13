@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    >
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDFDFD"
+        android:orientation="vertical"
+        android:weightSum="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#075E54"
+            >
+            <LinearLayout
+                android:id="@+id/Linearlayout_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+
+                android:weightSum="5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/asap_bold"
+                    android:text="WhatsApp"
+                    android:textColor="#FDF3F3"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#075E54"
+                    android:src="@drawable/searchicon"></ImageButton>
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="#075E54"
+                    android:src="@drawable/menuicn"></ImageButton>
+
+
+            </LinearLayout>
+        </Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablayout"
+        android:background="#075E54"
+        android:fontFamily="@font/asap_bold"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicator="@color/white"
+app:tabIndicatorHeight="3dp"
+        >
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab1"
+
+            android:icon="@drawable/camera_icn"/>
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab2"
+            android:text="Chat"/>
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab3"
+            android:text="Status"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab4"
+            android:text="Call"/>
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/vpager"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
